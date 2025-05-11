@@ -1,0 +1,141 @@
+/* Styling for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Keep content as it was */
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 95.8vw;
+}
+
+/* Logo section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-logo .icon {
+  font-size: 24px;
+  color: #4a4a4a;
+}
+
+.navbar-logo h4 {
+  margin: 0;
+  font-weight: bold;
+  color: #222; /* Darker color */
+  font-size: 1.2rem; /* Slightly larger */
+}
+
+/* Links section */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Navbar links */
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+  color: #333; /* Darker text */
+  font-size: 1.1rem; /* Larger text */
+  cursor: pointer;
+  position: relative; /* For controlling the position of the pseudo-element */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #007bff; /* Blue highlight on hover */
+  transform: translateY(-2px); /* Both icon and text move up together */
+}
+
+.navbar-link:hover .icon {
+  color: #007bff; /* Matches text hover color */
+}
+
+/* Remove the blue line effect on hover */
+.navbar-link::after {
+  content: "";
+  display: none; /* Hide the blue line */
+}
+
+/* Add hover effects for icons */
+.navbar-link .icon {
+  font-size: 20px;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+#logo_1 {
+  height: 85%;
+  width: 60px;
+}
+
+/* Mobile Menu Toggle (Hamburger Menu) */
+.navbar-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navbar-toggle div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+
+/* For tablet and mobile screens */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none; /* Hide links on smaller screens */
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.active {
+      display: flex; /* Show links when active */
+  }
+
+  .navbar-toggle {
+      display: flex; /* Show hamburger menu */
+  }
+
+  .navbar-link {
+      font-size: 1.2rem; /* Adjust font size for mobile */
+      padding: 10px 0;
+  }
+}
+
+/* For very small screens (less than 480px) */
+@media (max-width: 480px) {
+  .navbar {
+      width: 100vw; /* Ensure navbar takes full width */
+  }
+
+  .navbar-logo h4 {
+      font-size: 1rem; /* Adjust logo size on very small screens */
+  }
+
+  .navbar-link {
+      font-size: 1rem; /* Adjust link font size */
+  }
+}

@@ -1,0 +1,67 @@
+.navbar-wrapper {
+    display: flex;
+    justify-content: center; /* Center the navbar div */
+    width: 100%;
+}
+
+
+
+/* Footer styling */
+#footer {
+    background-color: #f5f5f5; /* Light gray background */
+    width: 93.7vw; /* Full width of the viewport */
+    box-shadow: 0px -5px 4px rgba(0, 0, 0, 0.2); /* Shadow at the top */
+    display: flex; /* Flexbox layout for horizontal alignment */
+    justify-content: space-around; /* Even spacing between sections */
+    align-items: flex-start; /* Align items at the top */
+    padding: 20px 40px; /* Padding for inner spacing */
+    text-align: left; /* Align text to the left */
+    margin-top: 50px;
+}
+
+/* General styles for footer sections */
+.divs {
+    flex: 1; /* Allow sections to grow evenly */
+    max-width: 300px; /* Limit width for better layout */
+    margin: 20px;
+}
+
+/* Specific styling for the about section */
+#about, #source {
+    max-width: 400px; /* Adjusted for better readability */
+}
+
+/* Styling for headings */
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Styling for links */
+h5 {
+    font-weight: 300;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    #footer {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align the content */
+    }
+
+    .divs {
+        max-width: 90%; /* Adjust width for smaller screens */
+        text-align: center; /* Center-align text */
+    }
+}

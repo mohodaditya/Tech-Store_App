@@ -1,0 +1,46 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns by default */
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%; /* Ensure the container takes full width */
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+.cards-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto; /* Allow the card height to adjust based on content */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #fff; /* Optional: Background color for cards */
+    max-width: 100%; /* Prevent card overflow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens (tablets) */
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for phones */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .cards-container > div {
+        padding: 10px; /* Adjust padding for the cards */
+    }
+}

@@ -1,0 +1,99 @@
+/* Tabs Container */
+.tabs-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
+}
+
+/* Individual Tab Button */
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Add spacing between icon and text */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Active Tab Button */
+.tab-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Icon Styling */
+.tab-icon {
+  font-size: 18px; /* Adjust icon size */
+}
+
+/* Tab Content */
+.tab-content {
+  font-size: 18px;
+  color: #333;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Active Tab Content */
+.tab-content.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .tab-buttons {
+      justify-content: center; /* Center tab buttons on medium screens */
+      gap: 15px;
+  }
+
+  .tab-btn {
+      font-size: 14px; /* Reduce font size of tab buttons for medium screens */
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+
+  .tab-icon {
+      font-size: 16px; /* Adjust icon size */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .tab-buttons {
+      gap: 10px; /* Reduce gap between buttons on mobile */
+  }
+
+  .tab-btn {
+      font-size: 12px; /* Make buttons smaller for mobile */
+      padding: 6px 12px; /* Adjust padding to make the buttons more compact */
+      margin: 5px 0; /* Add margin between buttons */
+      width: 48%; /* Make buttons take up half the width (2 per row) */
+  }
+
+  .tab-btn:nth-child(odd) {
+      margin-right: 4%; /* Add some space between the two buttons in each row */
+  }
+
+  .tab-icon {
+      font-size: 14px; /* Reduce icon size on mobile */
+  }
+
+  .tab-content {
+      font-size: 16px; /* Adjust content font size for small screens */
+  }
+}
